@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-user {
+    display: flex;
+    justify-content: center;
+    padding-top: 25vh;
+}
+table {
+    border-collapse: collapse;
+    
+}
+table th {
+    text-align: center;
+    background-color: lightgray;
+    padding: 4px 30px 4px 10px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+table td {
+    border: 1px solid lightgrey;
+    padding: 4px 8px;
+    text-align: center;
+}
+
