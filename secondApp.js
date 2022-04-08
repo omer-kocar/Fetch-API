@@ -7,10 +7,18 @@ function getData() {
     .then((res) => res.json())
     .then((data) => {
       let author = data.results;
+      // console.log(author)
+      
+      let secondAuthor = author.sort(function (a, b) { // Sorting before looping 
+          // console.log(a.dob.age - b.dob.age)
+          return (a.dob.age - b.dob.age)
+      })
       // Get Data Value
-      let output = "<h2>Users Information</h2>";
+      let output="";
+      // console.log(output)
       // Get Data Loop
-      author.forEach((element) => {
+      secondAuthor.forEach((element) => {
+       
         output += `
         <div class="container">
           <div class="card mt-4 bg-light">
@@ -29,10 +37,6 @@ function getData() {
           </div>
         </div>`;
       });
-
-      
-
       document.querySelector("#btn").innerHTML = output;
-      
     });
 }
